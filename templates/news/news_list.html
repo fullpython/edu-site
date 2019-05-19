@@ -13,8 +13,9 @@ Yangiliklar
 
     {% for item in object_list %}
         <div>
-            <h2>{{item.title}}</h2>
-            <p>{{item.body}}</p>
+            <h2><a href="{% url 'news_detail' item.pk %}">{{item.title}}</a> </h2>
+            <p>{{item.date_published}}</p>
+            <hr>
         </div>
     {% endfor %}
 

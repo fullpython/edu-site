@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Yangilik
+{% endblock %}
+
+
+
+
+{% block content %}
+<h1>{{news.title}}</h1>
+<p>{{news.date_published}}</p>
+<div>
+    {{news.body}}
+</div>
+
+   
+
+{% endblock %}
