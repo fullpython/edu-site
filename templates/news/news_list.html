@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Yangiliklar
+{% endblock %}
+
+
+
+
+{% block content %}
+<h1>Yangiliklar</h1>
+
+    {% for item in object_list %}
+        <div>
+            <h2>{{item.title}}</h2>
+            <p>{{item.body}}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
