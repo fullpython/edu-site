@@ -12,6 +12,11 @@ Yangilik
 <h1>{{news.title}}</h1>
 <p>{{news.date_published}}</p>
 <div>
+    {% if news.image %}
+    <img src="{{ news.image.url }}" width=200 height=200/>
+    {% else %}
+    <p>no image</p>
+    {% endif%}
     {{news.body}}
 </div>
 
