@@ -12,3 +12,11 @@ class News(models.Model):
 
     def __str__(self):
         return f'{self.title}'
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=20)
+    news = models.ManyToManyField(News,related_name='news_categories')
+
+    def __str__(self):
+        return f'{self.name}'
