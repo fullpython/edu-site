@@ -25,7 +25,7 @@ SECRET_KEY = '-2^p^f2f%_p#h5&-gl!$ix_-t_0-2#-$i8$-5stv09y!2u8%pt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # my apps
     'news',
+    'school',
 ]
 
 MIDDLEWARE = [
