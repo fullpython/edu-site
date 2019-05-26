@@ -10,7 +10,11 @@ Yangiliklar
 
 {% block content %}
 <h1>Yangiliklar</h1>
-
+    {% if user.is_authenticated %}
+    <div class='col-lg-6 float-right'>
+        <a class='btn btn-success' type='button' href="{% url 'news_create' %}">Create News</a>    
+    </div>
+    {% endif %}
     {% for item in object_list %}
         <div>
             <h2><a href="{% url 'news_detail' item.pk %}">{{item.title}}</a> </h2>

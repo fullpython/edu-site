@@ -13,13 +13,21 @@ Yangilik
 <p>{{news.date_published}}</p>
 <div>
     {% if news.image %}
-    <img src="{{ news.image.url }}" width=200 height=200/>
+    <img src="{{ news.image.url }}" width=200 height=200 />
     {% else %}
     <p>no image</p>
     {% endif%}
     {{news.body}}
 </div>
-
-   
+{% if user.is_authenticated %}
+<div class='row'>
+    <div class='col-lg-6 float-right'>
+        <a class='btn btn-primary' type='button' href="{% url 'news_update' news.id  %}">Update News</a>
+    </div>
+    <div class='col-lg-6 float-right'>
+        <a class='btn btn-danger' type='button' href="{% url 'news_delete' news.id  %}">Delete News</a>
+    </div>
+</div>
+{% endif %}
 
 {% endblock %}
