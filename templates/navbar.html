@@ -13,6 +13,12 @@
           <a class="nav-link" href="{% url 'draft_news_list' %}">Drafts</a>
         </li>
         {% endif %}
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">About us</a>
+        </li>
+
       </ul>
       <span class="nav-item d-lg-inline-block mb-3 mb-md-0 ml-md-3">
         {% if user.is_authenticated %}
