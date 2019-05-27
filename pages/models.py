@@ -6,3 +6,6 @@ class ContactUs(models.Model):
     email = models.EmailField()
     body = models.TextField()
     created_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
