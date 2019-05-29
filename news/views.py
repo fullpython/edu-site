@@ -35,6 +35,10 @@ class NewsCreateView(LoginRequiredMixin,CreateView):
     template_name = 'news/news_create.html'
     success_url = reverse_lazy('news_list')
 
+    def form_valid(self,form):
+        print(form.is_valid(),'sdas')
+        return super().form_valid(form)
+
 class NewsUpdateView(LoginRequiredMixin,UpdateView):
     model  = News
     fields =  ['title','body','image','is_published']
